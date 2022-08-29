@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>loginrequester</title>
+    <h1>Login</h1>
+</head>
+<body>
+    <form>
+        <div id="all">
+            <div id="login-box">
+            
+              <div id="login-inputs">
+                <input type="text" placeholder="Username" name="Username">
+                <br/>
+                <input type="password" placeholder="Password" name="Password">
+              </div>
+             <div id="enviar">
+                <input type="button" onclick="Login()" class="botao" value="Login">
+             
+              </div>
+            </div>
+          </div>
+    </form>
+</body>
+</html>
+
+<style>
+     /* Tamanho, cor e margem */
+ h1{
+    color: rgb(2, 2, 114);
+    margin-left: 3%;
+    margin-top: 5%;
+    font-size: 40px;
+    font-family: 'Open Sans', sans-serif;
+    font-family: 'Quicksand', sans-serif;
+    font-family: 'Roboto', sans-serif;
+    font-family: 'Roboto Condensed', sans-serif;
+ }
+  /* Início do formulário */
+ input[type=text]{
+    padding: 10px;
+    width: 60%;
+ }
+
+ input[type=password]{
+    padding: 10px;
+    width: 60%;
+    margin-top: 15px;
+ }
+
+
+ input[type=button]{
+    background-color: rgb(2, 2, 114);
+    color: #fff;
+    font-size: 30px;
+ }
+
+ div{
+    padding: 10px;
+    margin-top: 5px;
+ }
+/* Fim do formulário */
+
+</style>
+    
+<script>
+   // roboto
+   // gfufggv7hcgc6ljjow
+
+
+   /* Sistema de aceitação de credenciais */
+   
+    function Login() {  
+        var done=0;
+        var Username = document.getElementsByName('Username')[0].value;
+        Username=Username.toLowerCase();
+        var Password= document.getElementsByName('Password')[0].value;
+        Password=Password.toLowerCase();                               
+        if (Username=="admin" && Password=="admin") {
+          window.location="login concluido.html";               
+          done=1;
+        }
+        if (done==0) { alert("Dados incorretos, tente novamente"); }
+      }
+</script>
+
+
+ 
